@@ -14,11 +14,13 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 
 	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
-		String jsLocation = "classpath:/static/js/";
+		String location = "classpath:/static/src/";
 		if (!debug) {
-			jsLocation = "classpath:/static/js-build/";
+		  location = "classpath:/static/build/";
 		}
-		registry.addResourceHandler("/js/**").addResourceLocations(jsLocation);
+		registry.addResourceHandler("/js/**").addResourceLocations(location + "js/");
+		registry.addResourceHandler("/images/**").addResourceLocations(location + "images/");
+		registry.addResourceHandler("/css/**").addResourceLocations(location + "css/");
 	}
 
 	@Override
