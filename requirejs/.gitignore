@@ -5,3 +5,4 @@ target
 .classpath
 .project
 /src/main/resources/static/build/
+/node/
