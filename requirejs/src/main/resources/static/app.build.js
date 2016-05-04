@@ -4,9 +4,9 @@
 	dir: './build',
 	mainConfigFile: './src/js/require.config.js',
 	modules: [{
-	   name: './lib' 
+	   name: 'lib' 
 	}, {
-	    name: './app',
+	    name: 'app',
 	    exclude: ['lib']
 	}]
 })
