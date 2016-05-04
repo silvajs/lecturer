@@ -2,6 +2,7 @@ package com.silvajs.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.CacheControl;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
@@ -18,7 +19,7 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 		if (!debug) {
 		  location = "classpath:/static/build/";
 		}
-		registry.addResourceHandler("/js/**").addResourceLocations(location + "js/");
+		registry.addResourceHandler("/js/**").addResourceLocations(location + "js/").setCacheControl(CacheControl.noCache());
 		registry.addResourceHandler("/images/**").addResourceLocations(location + "images/");
 		registry.addResourceHandler("/css/**").addResourceLocations(location + "css/");
 	}
