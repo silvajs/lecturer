@@ -4,6 +4,7 @@ requirejs.config({
 	}
 })
 
-require(['./helper'], function(helper) {
-	console.log(helper.trim('  amd    '));
+require(['helper'], function(helper) {
+	var str = helper.trim('  amd    ');
+	console.log(str);
 });
