@@ -1,5 +1,11 @@
 requirejs.config({
-	baseUrl: '/js'
+	baseUrl: '/js',
+	paths: {
+		'jquery': [
+           '//cdn.bootcss.com/jquery/2.2.3/jquery.js',
+           './lib/jquery'
+		 ]
+	}
 });
 
 require(['helper'], function(helper) {

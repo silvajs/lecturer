@@ -1,5 +1,5 @@
 define('helper', ['jquery'], function($) {
-	console.log('helper');
+	console.log($);
 	return {
 		trim: function(str) {
 			return $.trim(str);
