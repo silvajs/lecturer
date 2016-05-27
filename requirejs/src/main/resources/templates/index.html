@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8" />
-	<title>requirejs demo</title>
-	<link rel="stylesheet" type="text/css" href="/css/index.css" />
+<meta charset="UTF-8" />
+<title>requirejs demo</title>
+<link rel="stylesheet" type="text/css" href="/css/index.css" />
 </head>
 <body>
-    <img src="/images/logo.png"/>
+	<img src="/images/logo.png" />
 	<h1>requirejs和自动打包</h1>
-	
-	<script src="/js/lib/require.js"></script>
+	<div id="user"></div>
+
+	<div id="dialog" title="Basic dialog">
+		<p>This is the default dialog which is useful for displaying information. The dialog window can be moved, resized
+			and closed with the 'x' icon.</p>
+	</div>
+
+	<script src="/js/lib/require/require.js"></script>
 	<script src="/js/require.config.js"></script>
-	<script src="/js/lib.js"></script>
 	<script src="/js/app.js"></script>
 </body>
 </html>
