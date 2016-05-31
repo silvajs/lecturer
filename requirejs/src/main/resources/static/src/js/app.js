@@ -6,13 +6,16 @@ requirejs.config({
 		'modernizr': './lib/modernizr',
 		'backbone': './lib/backbone',
 		'underscore': './lib/underscore',
-		'text': './lib/text'
+		'text': './lib/text',
+		'jquery-ui': './lib/jquery-ui',
+		'css': './lib/require/css'
 	},
 	shim: {
 		'modernizr': {
 			exports: 'Modernizr'
 		},
-		'bootstrap': ['jquery']
+		'bootstrap': ['jquery'],
+		'jquery-ui': ['css!/css/jquery-ui/jquery-ui.css', 'css!/css/jquery-ui/jquery-ui.theme.css']
 	},
 	config: {
 		text: {
@@ -20,10 +23,17 @@ requirejs.config({
 				xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
 			}
 		}
-	}
+	},
+//	map: {
+//		'*': {
+//			'css': './lib/require/css'
+//		}
+//	}
 });
 
-require(['./app/api', 'backbone'], function(api) {
+require(['./app/api', 
+         'backbone', 
+         'jquery-ui'], function(api) {
 	
 	$('#user').click(function() {
 //		api.getUser().then(function(user) {
