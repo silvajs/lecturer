@@ -13,7 +13,7 @@ requirejs.config({
 		'backbone': './lib/backbone',
 		'underscore': './lib/underscore',
 		'text': './lib/require/text',
-		'jquery-ui': './lib/jquery-ui',
+		'jquery-ui': './lib/jquery-ui/jquery-ui',
 		'css': './lib/require/css',
 		'i18n': './lib/require/i18n'
 	},
@@ -22,7 +22,7 @@ requirejs.config({
 			exports: 'Modernizr'
 		},
 		'bootstrap': ['jquery'],
-		'jquery-ui': ['css!/css/jquery-ui/jquery-ui.css', 'css!/css/jquery-ui/jquery-ui.theme.css']
+		'jquery-ui': ['css!./lib/jquery-ui/jquery-ui.css', 'css!./lib/jquery-ui/jquery-ui.theme.css']
 	},
 	config: {
 		text: {
