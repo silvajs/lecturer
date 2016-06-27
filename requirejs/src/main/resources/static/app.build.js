@@ -9,7 +9,7 @@
 		name: 'app',
 //		excludeShallow: ['backbone']
 //		include: ['modernizr']
-		insertRequire: ['modernizr']
+//		insertRequire: ['modernizr']
 	}, {
 		name: 'user'
 	}]
