@@ -1,0 +1,14 @@
+{
+  "name": "requirejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "package": "node src/main/resources/static/r.js -o src/main/resources/static/app.build.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

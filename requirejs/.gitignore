@@ -6,3 +6,4 @@ target
 .project
 /src/main/resources/static/build/
 /node/
+npm-debug.log
